@@ -2,5 +2,8 @@
   "name": "secret-santa",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "csv": "^1.1.1"
+  }
 }
