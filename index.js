@@ -11,6 +11,14 @@ function createPerson(keys, values) {
     }, {})
 }
 
+function matchPeople(people) {
+  const santas = []
+  const receivers = []
+
+  
+  // people
+}
+
 const readFile = filePath => new Promise((resolve, reject) => {
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) { reject(err) }

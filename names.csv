@@ -1,4 +1,5 @@
-Email,"Full Name",Address,About
-"seb*****94@gmail.com","Seb Place","**** Road Waterbeach","I like yummy"
-"ari*****os@gmail.com","Ari Metos","**** Road Waterbeach","Cats cats cats and hair strokes"
-"cal*****ce@gmail.com","Cally Place","**** Road Waterbeach","Vegan running"
+Email,"Full Name",Address,Area,About
+"seb*****94@gmail.com","Seb Place","**** Road Waterbeach","UK","LOTR"
+"ari*****os@gmail.com","Ari Metos","**** Road Waterbeach","UK","Cats, cats, cats and hair strokes"
+"cal*****ce@gmail.com","Cally Place","**** Road Waterbeach","UK","Vegan running"
+"abc@example.com","Zoe Bloggs","The sea, England","UK","Vegan running"
