@@ -24,15 +24,16 @@ const parseCSV = data => new Promise((resolve, reject) => {
     else {
       const headers = rows[0]
       const body = rows.slice(1)
-      const people = body.map(row => { return createPerson(headers, row)} )
+      const people = body.map(createPerson.bind(this, headers))
+      
       resolve(people);
     }
   })
 })
 
 readFile(FILE_PATH)
-  .then(parseCSV.bind(this))
-  .then(people => console.log(people))
+  .then(parseCSV)
+  .then(console.log)
 
 
 // take an object, randomly select unpaired object and pair them
