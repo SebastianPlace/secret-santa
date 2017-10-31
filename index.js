@@ -20,6 +20,11 @@ function matchPeople(people) {
     }
   */
 
+  // NOTE: What to do for odd umber of people?
+  //  Could be cyclic: a -> b -> c -> a
+
+  // NOTE: should attempt to match by proximity.
+
 
   const SANTA_POOL = people.slice(), // clone of people
   const RECEIVER_POOL = people.slice(), // clone of people
@@ -39,12 +44,6 @@ function matchPeople(people) {
   //   }
   //   return group;
   // }, [])
-
-  // console.log(group1)
-  // // people
-  // //   .reduce((acc, cur) => {
-  // //     return {acc.santas = 
-  // //   }, INITIAL_OBJ)  
 }
 
 const readFile = filePath => new Promise((resolve, reject) => {
@@ -75,15 +74,3 @@ readFile(FILE_PATH)
   .then(parseCSV)
   .then(matchPeople)
   .catch(handleError)
-
-
-// take an object, randomly select unpaired object and pair them
-// what does a pair look like?
-// everyone needs to be a giver
-// everyone needs to be a receiver
-/* 
-{
-  giver: personB
-  receiver: personA
-}
-*/
