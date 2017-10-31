@@ -12,11 +12,30 @@ function createPerson(keys, values) {
 }
 
 function matchPeople(people) {
-  const santas = []
-  const receivers = []
+  const INITIAL_OBJ = {
+    santas: [],
+    receivers: []
+  }
 
-  
+  const group1 = people.reduce((group, person, i) => {
+    if(i % 2 === 0) {
+      return  [...group, ...[person]];
+    }
+    return group;
+  }, [])
+
+  const group2 = people.reduce((group, person, i) => {
+    if(i % 2 !== 0) {
+      return  [...group, ...[person]];
+    }
+    return group;
+  }, [])
+
+  console.log(group1, group2)
   // people
+  //   .reduce((acc, cur) => {
+  //     return {acc.santas = 
+  //   }, INITIAL_OBJ)  
 }
 
 const readFile = filePath => new Promise((resolve, reject) => {
@@ -39,9 +58,14 @@ const parseCSV = data => new Promise((resolve, reject) => {
   })
 })
 
+const handleError = (error) => {
+  console.error(error);
+}
+
 readFile(FILE_PATH)
   .then(parseCSV)
-  .then(console.log)
+  .then(matchPeople)
+  .catch(handleError)
 
 
 // take an object, randomly select unpaired object and pair them
