@@ -12,30 +12,39 @@ function createPerson(keys, values) {
 }
 
 function matchPeople(people) {
-  const INITIAL_OBJ = {
-    santas: [],
-    receivers: []
-  }
-
-  const group1 = people.reduce((group, person, i) => {
-    if(i % 2 === 0) {
-      return  [...group, ...[person]];
+  //OUTPUT:
+  /*
+    {
+      santa: {person1},
+      receiver: {person2}
     }
-    return group;
-  }, [])
+  */
 
-  const group2 = people.reduce((group, person, i) => {
-    if(i % 2 !== 0) {
-      return  [...group, ...[person]];
-    }
-    return group;
-  }, [])
 
-  console.log(group1, group2)
-  // people
-  //   .reduce((acc, cur) => {
-  //     return {acc.santas = 
-  //   }, INITIAL_OBJ)  
+  const SANTA_POOL = people.slice(), // clone of people
+  const RECEIVER_POOL = people.slice(), // clone of people
+
+  people.reduce(())
+  // TOO TIRED FOR THIS SHIT
+  // const group1 = people.reduce((group, person, i) => {
+  //   if(i % 2 === 0) {
+  //     return  [...group, ...[person]];
+  //   }
+  //   return group;
+  // }, [])
+
+  // const group2 = people.reduce((group, person, i) => {
+  //   if(i % 2 !== 0) {
+  //     return  [...group, ...[person]];
+  //   }
+  //   return group;
+  // }, [])
+
+  // console.log(group1)
+  // // people
+  // //   .reduce((acc, cur) => {
+  // //     return {acc.santas = 
+  // //   }, INITIAL_OBJ)  
 }
 
 const readFile = filePath => new Promise((resolve, reject) => {
